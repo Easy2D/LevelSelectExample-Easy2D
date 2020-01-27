@@ -5,7 +5,7 @@
 // 项目类型：Win32 Console Application
 //---------------------------------------------------------
 
-#include <easy2d.h>
+#include <easy2d/easy2d.h>
 
 using namespace easy2d;
 
