@@ -41,7 +41,7 @@ Button* g_RightButton;	// 右按钮
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
-	if (Game::init(L"关卡选择", 320, 480))
+	if (Game::init("关卡选择", 320, 480))
 	{
 		// 设置节点默认中心点
 		Node::setDefaultAnchor(0.5f, 0.5f);
@@ -63,7 +63,7 @@ void EnterScene()
 	g_Level = 0;
 
 	// 创建背景图对象
-	auto background = gcnew Sprite(L"res/LS00.png");
+	auto background = gcnew Sprite("res/LS00.png");
 	// 背景图居中显示
 	background->setPos(Window::getSize() / 2);
 	// 缩小背景图
@@ -90,10 +90,10 @@ void EnterScene()
 void InitJungle()
 {
 	// 创建图片
-	auto JungleImage = gcnew Sprite(L"res/LS13.png");
+	auto JungleImage = gcnew Sprite("res/LS13.png");
 	JungleImage->setPosY(Window::getHeight() / 2 - 40);
 	// 创建文字
-	auto JungleText = gcnew Sprite(L"res/LS10.png");
+	auto JungleText = gcnew Sprite("res/LS10.png");
 	JungleText->setPosY(Window::getHeight() - 130);
 	// 图片居中
 	JungleImage->setPosX(Window::getWidth() / 2);
@@ -107,10 +107,10 @@ void InitJungle()
 void InitChina()
 {
 	// 创建图片
-	auto ChinaImage = gcnew Sprite(L"res/LS14.png");
+	auto ChinaImage = gcnew Sprite("res/LS14.png");
 	ChinaImage->setPosY(Window::getHeight() / 2 - 20);
 	// 创建文字
-	auto ChinaText = gcnew Sprite(L"res/LS11.png");
+	auto ChinaText = gcnew Sprite("res/LS11.png");
 	ChinaText->setPosY(Window::getHeight() - 130);
 	// 图片居中
 	ChinaImage->setPosX(Window::getWidth() / 2 + Window::getWidth());
@@ -124,10 +124,10 @@ void InitChina()
 void InitEgypt()
 {
 	// 创建图片
-	auto EgyptImage = gcnew Sprite(L"res/LS15.png");
+	auto EgyptImage = gcnew Sprite("res/LS15.png");
 	EgyptImage->setPosY(Window::getHeight() / 2 - 20);
 	// 设置文字位置
-	auto EgyptText = gcnew Sprite(L"res/LS12.png");
+	auto EgyptText = gcnew Sprite("res/LS12.png");
 	EgyptText->setPosY(Window::getHeight() - 130);
 	// 图片居中
 	EgyptImage->setPosX(Window::getWidth() / 2 + Window::getWidth() * 2);
@@ -143,11 +143,11 @@ void InitButton()
 	// 创建开始按钮
 	auto startBtn = gcnew Button;
 	// 设置按钮图片
-	startBtn->setNormal(gcnew Sprite(L"res/LS07.png"));
+	startBtn->setNormal(gcnew Sprite("res/LS07.png"));
 	// 设置按钮被选中时的图片
-	startBtn->setSelected(gcnew Sprite(L"res/LS08.png"));
+	startBtn->setSelected(gcnew Sprite("res/LS08.png"));
 	// 设置按钮禁用时的图片
-	startBtn->setDisabled(gcnew Sprite(L"res/LS09.png"));
+	startBtn->setDisabled(gcnew Sprite("res/LS09.png"));
 	// 设置按钮位置
 	startBtn->setPos(Window::getWidth() / 2, Window::getHeight() - 80);
 	// 添加开始按钮
@@ -155,9 +155,9 @@ void InitButton()
 
 	// 创建左选按钮
 	g_LeftButton = gcnew Button;
-	g_LeftButton->setNormal(gcnew Sprite(L"res/LS01.png"));
-	g_LeftButton->setSelected(gcnew Sprite(L"res/LS02.png"));
-	g_LeftButton->setDisabled(gcnew Sprite(L"res/LS03.png"));
+	g_LeftButton->setNormal(gcnew Sprite("res/LS01.png"));
+	g_LeftButton->setSelected(gcnew Sprite("res/LS02.png"));
+	g_LeftButton->setDisabled(gcnew Sprite("res/LS03.png"));
 	g_LeftButton->setPosX(g_LeftButton->getWidth() / 2);
 	g_LeftButton->setPosY((Window::getHeight() - g_LeftButton->getHeight()) / 2);
 	g_LeftButton->setEnable(false);
@@ -168,9 +168,9 @@ void InitButton()
 
 	// 创建右选按钮
 	g_RightButton = gcnew Button();
-	g_RightButton->setNormal(gcnew Sprite(L"res/LS04.png"));
-	g_RightButton->setSelected(gcnew Sprite(L"res/LS05.png"));
-	g_RightButton->setDisabled(gcnew Sprite(L"res/LS06.png"));
+	g_RightButton->setNormal(gcnew Sprite("res/LS04.png"));
+	g_RightButton->setSelected(gcnew Sprite("res/LS05.png"));
+	g_RightButton->setDisabled(gcnew Sprite("res/LS06.png"));
 	g_RightButton->setPosX(Window::getWidth() - g_RightButton->getWidth() / 2);
 	g_RightButton->setPosY((Window::getHeight() - g_RightButton->getHeight()) / 2);
 	g_Scene->addChild(g_RightButton);
